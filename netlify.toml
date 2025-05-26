@@ -1,0 +1,12 @@
+[build]
+  command = "cd frontend && npm install && npm run build"
+  publish = "frontend/build"
+  NODE_VERSION = "18.0.0"
+
+[build.environment]
+  NPM_FLAGS = "--legacy-peer-deps"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
